@@ -31,8 +31,7 @@
     <div id="daily-users">
       {% set stats = addon.public_stats %}
       {% if stats %}
-        {# TODO real reverse URL #}
-        <a class='stats' title='View statistics' href="{{ locale_url('/statistics/addon/{0}'|f(addon.id)) }}">
+        <a class='stats' title='View statistics' href="{{ url('stats.overview', addon.slug) }}">
       {% endif %}
       {{ ngettext('{0} user', '{0} users', adu)|f(adu|numberfmt) }}
       {% if stats %}

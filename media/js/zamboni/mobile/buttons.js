@@ -95,7 +95,7 @@
                 if (self.classes.persona) {
                     return;
                 }
-                var href = activeInstaller.attr('href'),
+                var href = activeInstaller.href,
                     hash = hashes[href],
                     attr = self.attr,
                     install = attr.search ? z.installSearch : z.installAddon;
